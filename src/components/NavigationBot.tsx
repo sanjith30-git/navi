@@ -682,35 +682,10 @@ export const NavigationBot: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 relative">
-      {/* Top Right Controls */}
-      <div className="fixed top-4 right-4 z-40 flex items-center space-x-2">
-        {/* Settings Button */}
-        <button
-          onClick={() => setShowSettings(true)}
-          className="flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg bg-gradient-to-r from-gray-600 to-gray-700 text-white"
-        >
-          <Settings className="w-4 h-4" />
-          <span className="hidden sm:inline">{navState.language === 'tamil' ? 'அமைப்புகள்' : 'Settings'}</span>
-        </button>
-        
-        {/* Language Toggle */}
-        <button
-          onClick={toggleLanguage}
-          className={`flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg ${
-            navState.language === 'tamil' 
-              ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white' 
-              : 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-          }`}
-        >
-          <Globe className="w-4 h-4" />
-          <span>{navState.language === 'tamil' ? 'EN' : 'தமிழ்'}</span>
-        </button>
-      </div>
-
       {/* Header */}
       <div className="bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 shadow-sm border-b relative z-30">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-start">
+          <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <MapPin className="w-8 h-8 text-white" />
               <div>
@@ -720,6 +695,30 @@ export const NavigationBot: React.FC = () => {
                 <h2 className="text-2xl font-bold text-white">Campus Navigator</h2>
                 <p className="text-sm text-white opacity-90">Your AI-powered campus guide</p>
               </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              {/* Settings Button */}
+              <button
+                onClick={() => setShowSettings(true)}
+                className="flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg bg-gradient-to-r from-gray-600 to-gray-700 text-white"
+              >
+                <Settings className="w-4 h-4" />
+                <span className="hidden sm:inline">{navState.language === 'tamil' ? 'அமைப்புகள்' : 'Settings'}</span>
+              </button>
+              
+              {/* Language Toggle */}
+              <button
+                onClick={toggleLanguage}
+                className={`flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg ${
+                  navState.language === 'tamil' 
+                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white' 
+                    : 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
+                }`}
+              >
+                <Globe className="w-4 h-4" />
+                <span>{navState.language === 'tamil' ? 'EN' : 'தமிழ்'}</span>
+              </button>
             </div>
             
             {routeInfo && (
