@@ -715,11 +715,9 @@ export const NavigationBot: React.FC = () => {
               <MapPin className="w-8 h-8 text-white" />
               <div>
                 <div className="text-left mb-2">
-                  <h2 className="text-3xl font-bold text-white animate-pulse">
-                    Arunai Engineering College
-                  </h2>
+                  <h1 className="text-3xl font-bold text-white animate-pulse">Arunai Engineering College</h1>
                 </div>
-                <h1 className="text-2xl font-bold text-white">Campus Navigator</h1>
+                <h2 className="text-2xl font-bold text-white">Campus Navigator</h2>
                 <p className="text-sm text-white opacity-90">Your AI-powered campus guide</p>
               </div>
             </div>
