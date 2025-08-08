@@ -710,11 +710,11 @@ export const NavigationBot: React.FC = () => {
       {/* Header */}
       <div className="bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 shadow-sm border-b relative z-30">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-start">
             <div className="flex items-center space-x-3">
               <MapPin className="w-8 h-8 text-white" />
               <div>
-                <div className="text-center mb-2">
+                <div className="text-left mb-2">
                   <h2 className="text-3xl font-bold text-white animate-pulse">
                     Arunai Engineering College
                   </h2>
