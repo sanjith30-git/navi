@@ -36,7 +36,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
         {/* Title Animation */}
         <div className={`transition-all duration-1000 delay-500 ${currentStep >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-4xl font-bold mb-2">Navigation Bot</h1>
-          <p className="text-xl text-blue-200 mb-8">Arunai Engineering College</p>
+          <p className="text-xl text-blue-200 mb-8 text-left">Arunai Engineering College</p>
         </div>
 
         {/* Loading Animation */}
